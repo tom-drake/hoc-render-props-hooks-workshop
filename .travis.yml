@@ -1,3 +1,6 @@
+env:
+  - PUBLIC_URL=/hoc-render-props-hooks-workshop/
+
 language: node_js
 node_js:
   - "stable"

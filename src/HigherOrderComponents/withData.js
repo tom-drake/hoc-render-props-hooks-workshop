@@ -20,8 +20,9 @@ export default function withData(url) {
           })
           .then(({ data }) => this.setState({ data, loading: false }))
           .catch(error => {
+            this.setState({ loading: false });
             if (!axios.isCancel(error)) {
-              this.setState({ error, loading: false });
+              this.setState({ error });
             }
           });
       }

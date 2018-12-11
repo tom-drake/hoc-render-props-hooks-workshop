@@ -210,27 +210,21 @@ function MyComponent() {
       <Typography variant="h3" gutterBottom>
         Pros?
       </Typography>
-      <Typography className={classes.content} component="p">
-        <ul>
-          <li>
-            The consumer is in full control of any props its component has
-          </li>
-          <li>No magical props being passed to your component</li>
-        </ul>
+      <Typography className={classes.content} component="ul">
+        <li>The consumer is in full control of any props its component has</li>
+        <li>No magical props being passed to your component</li>
       </Typography>
       <Divider className={classes.divider} />
       <Typography variant="h3" gutterBottom>
         Cons?
       </Typography>
-      <Typography className={classes.content} component="p">
-        <ul>
-          <li>
-            PureComponent is useless in most cases as the render prop is
-            regenerated on each render. An instance method can be used and
-            passed in as the render prop to solve this but it can split your
-            code up a lot
-          </li>
-        </ul>
+      <Typography className={classes.content} component="ul">
+        <li>
+          PureComponent is useless in most cases as the render prop is
+          regenerated on each render. An instance method can be used and passed
+          in as the render prop to solve this but it can split your code up a
+          lot
+        </li>
       </Typography>
     </div>
   );

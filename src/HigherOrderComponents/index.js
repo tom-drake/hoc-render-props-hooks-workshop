@@ -210,37 +210,33 @@ const EnhancedComponent = compose(
       <Typography variant="h3" gutterBottom>
         Pros?
       </Typography>
-      <Typography className={classes.content} component="p">
-        <ul>
-          <li>Code reuse.</li>
-          <li>
-            Can be used to seperate the data layer from visual layer (Redux is a
-            good example).
-          </li>
-          <li>Supports the single responsibility model.</li>
-        </ul>
+      <Typography className={classes.content} component="ul">
+        <li>Code reuse.</li>
+        <li>
+          Can be used to seperate the data layer from visual layer (Redux is a
+          good example).
+        </li>
+        <li>Supports the single responsibility model.</li>
       </Typography>
       <Divider className={classes.divider} />
       <Typography variant="h3" gutterBottom>
         Cons?
       </Typography>
-      <Typography className={classes.content} component="p">
-        <ul>
-          <li>Props can be overriden by the wrapper without you knowing</li>
-          <li>
-            It's not always clear where props come from if looking at the
-            component in isolation.
-          </li>
-          <li>
-            Need to remeber to hoist the non react statics from the wrapped
-            component
-          </li>
-          <li>
-            Any ref attached to the HoC will attach only to the HoC and not the
-            wrapped component. Need to use the forwardRef API provided by react.
-            https://reactjs.org/docs/forwarding-refs.html
-          </li>
-        </ul>
+      <Typography className={classes.content} component="ul">
+        <li>Props can be overriden by the wrapper without you knowing</li>
+        <li>
+          It's not always clear where props come from if looking at the
+          component in isolation.
+        </li>
+        <li>
+          Need to remeber to hoist the non react statics from the wrapped
+          component
+        </li>
+        <li>
+          Any ref attached to the HoC will attach only to the HoC and not the
+          wrapped component. Need to use the forwardRef API provided by react.
+          https://reactjs.org/docs/forwarding-refs.html
+        </li>
       </Typography>
     </div>
   );
