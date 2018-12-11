@@ -7,6 +7,8 @@ cache:
 script:
   - npm test
   - npm run build
+before_deploy:
+  - cd build
 deploy:
   provider: pages
   skip-cleanup: true
