@@ -12,37 +12,53 @@ import HigherOrderComponents from "./HigherOrderComponents";
 import RenderProps from "./RenderProps";
 import Hooks from "./Hooks";
 
+const baseUrl = process.env.PUBLIC_URL;
+
 const App = ({ classes, location }) => {
   return (
     <Fragment>
       <AppBar position="static" color="default">
         <Tabs centered value={location.pathname}>
-          <Tab label="Home" value="/" component={Link} to="/" />
+          <Tab
+            label="Home"
+            value={`${baseUrl}/`}
+            component={Link}
+            to={`${baseUrl}/`}
+          />
           <Tab
             label="Higher Order Components"
-            value="/higher-order-components"
+            value={`${baseUrl}/higher-order-components`}
             component={Link}
-            to="/higher-order-components"
+            to={`${baseUrl}/higher-order-components`}
           />
           <Tab
             label="Render Props"
-            value="/render-props"
+            value={`${baseUrl}/render-props`}
             component={Link}
-            to="/render-props"
+            to={`${baseUrl}/render-props`}
           />
-          <Tab label="Hooks" value="/hooks" component={Link} to="/hooks" />
+          <Tab
+            label="Hooks"
+            value={`${baseUrl}/hooks`}
+            component={Link}
+            to={`${baseUrl}/hooks`}
+          />
         </Tabs>
       </AppBar>
       <Grid container justify="center">
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path={`${baseUrl}/`} component={Home} />
           <Route
             exact
-            path="/higher-order-components"
+            path={`${baseUrl}/higher-order-components`}
             component={HigherOrderComponents}
           />
-          <Route exact path="/render-props" component={RenderProps} />
-          <Route exact path="/hooks" component={Hooks} />
+          <Route
+            exact
+            path={`${baseUrl}/render-props`}
+            component={RenderProps}
+          />
+          <Route exact path={`${baseUrl}/hooks`} component={Hooks} />
         </Switch>
       </Grid>
     </Fragment>
