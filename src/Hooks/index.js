@@ -7,7 +7,6 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
 import DataDemo from "./DataDemo";
-// import DataDemoComposed from "./DataDemoComposed";
 
 const styles = {
   heading: {
@@ -21,11 +20,11 @@ const styles = {
   divider: {
     marginTop: 20,
     marginBottom: 20
+  },
+  datademo: {
+    padding: 5,
+    marginBottom: 20
   }
-  // datademo: {
-  //   padding: 5,
-  //   marginBottom: 20
-  // }
 };
 
 const Hooks = ({ classes }) => {
@@ -40,17 +39,34 @@ const Hooks = ({ classes }) => {
         What are they?
       </Typography>
       <Typography className={classes.content} component="p">
-        hooks
+        'Hooks are an upcoming feature that lets you use state and other React
+        features without writing a class'
       </Typography>
       <PrismCode component="pre" className="language-jsx">
-        {``}
+        {`import { useState } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}`}
       </PrismCode>
       <Divider className={classes.divider} />
       <Typography variant="h3" gutterBottom>
         How are they made?
       </Typography>
       <Typography className={classes.content} component="p">
-        hooks
+        A few hooks are provided by react such as useState and useEffect but you
+        can make your own by simply prepending your function with 'use'.
+        Generally your own hook will make use of the built in hooks or other
+        hooks.
       </Typography>
       <Typography variant="h4">Data loader Render Prop</Typography>
       <PrismCode component="pre" className="language-jsx">
@@ -127,14 +143,21 @@ const Hooks = ({ classes }) => {
         Pros?
       </Typography>
       <Typography className={classes.content} component="ul">
-        <li>pro</li>
+        <li>No need for classes</li>
+        <li>No need for 'this'</li>
+        <li>Easy to compose</li>
+        <li>Replaces both the HoC and render props patterns</li>
       </Typography>
       <Divider className={classes.divider} />
       <Typography variant="h3" gutterBottom>
         Cons?
       </Typography>
       <Typography className={classes.content} component="ul">
-        <li>con</li>
+        <li>Completely different to what we are used to</li>
+        <li>
+          Easy to break things i.e with conditional useState (anti-pattern) so
+          need a linter to help
+        </li>
       </Typography>
     </div>
   );

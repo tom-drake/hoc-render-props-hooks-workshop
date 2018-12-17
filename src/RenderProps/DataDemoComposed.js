@@ -14,7 +14,7 @@ export default function DataDemoComposed() {
   return (
     <Composed>
       {({ users, todos }) => {
-        if (users.loading && todos.loading) {
+        if (users.loading || todos.loading) {
           return <CircularProgress />;
         }
         return <ReactJson src={{ users: users.data, todos: todos.data }} />;

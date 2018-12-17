@@ -149,7 +149,7 @@ export default class DataLoader extends Component {
   {({ data: dataUsers, loading: loadingUsers }) => (
     <DataLoader url="https://jsonplaceholder.typicode.com/todos/1">
       {({ data: dataTodos, loading: loadingTodos }) => {
-        if (loadingUsers && loadingTodos) {
+        if (loadingUsers || loadingTodos) {
           return <CircularProgress />;
         }
         return (
