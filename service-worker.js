@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hoc-render-props-hooks-workshop/precache-manifest.f4839085408f39385c0a83e43de405b5.js"
+  "/hoc-render-props-hooks-workshop/precache-manifest.f75806cefa0100c0639ce45df2a8bc51.js"
 );
 
 workbox.clientsClaim();

@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/hoc-render-props-hooks-workshop/static/js/runtime~main.3f32b361.js"
   },
   {
-    "revision": "5abf7468695a6e5fd34146f5651ab350",
+    "revision": "c0bf3876fdc8941889c3b66edf6bd563",
     "url": "/hoc-render-props-hooks-workshop/index.html"
   }
 ];
